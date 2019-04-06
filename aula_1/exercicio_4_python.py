@@ -137,50 +137,26 @@ lista_de_usuarios = [
     "idade": 43,
     "email": "SCUVGmVBRpREfAMIleo@4linux.com",
     "sexo": "?",
-    "endereco": "Rua ioMdZJPBgdMUzWsDg"
+    "endereco": "Rua ioMd ZJPBgdMUzWsDg"
   }
 ]
 
-#string_formatada = '{:.>20}'.format('Lucas')
-#print(string_formatada)
-
 for usuario in lista_de_usuarios:
-  string_nome = '{:.>20}'.format(usuario['nome'])
-  string_idade = '{:.>5}'.format(usuario['idade'])
-  string_endereco = '{:.>50}'.format(usuario['endereco'])
-  string_sexo = '{:.>2}'.format(usuario['sexo'])
-  print( 'Nome: ' + string_nome + 'Idade: ' + string_idade + 'Endereço: ' + string_endereco + 'Sexo: ' + string_sexo)
+  if 'l' in usuario['email'].lower() or 'j' in usuario['email'].lower():  
+   if usuario['idade'] > 25:
+         print(lista_de_usuarios)
 
+TEMPLATE = '{};{};{};{};{};'
 
-  TEMPLATE = ' {:>20} | {:>5} | {:>50} | {:>4} | {:>35}'
+CABECALHO = TEMPLATE.format('NOME', 'IDADE', 'ENDERECO', 'SEXO', 'EMAIL')
 
-  CABECALHO = TEMPLATE.format('NOME', 'IDADE', 'ENDERECO', 'SEXO', 'EMAIL')
-
-  print(CABECALHO)
-  for usuario in lista_de_usuarios:
-    usuario_formatado = TEMPLATE.format(
-      usuario['nome'],
-      usuario['idade'],
-      usuario['endereco'],
-      usuario['sexo'],
-      usuario['email'],
-      )
-    print(usuario_formatado)
-
-
-###########################################################################################################################
-
-  TEMPLATE = ' {} ; {} ; {} ; {} ; {};'
-
-  CABECALHO = TEMPLATE.format('NOME', 'IDADE', 'ENDERECO', 'SEXO', 'EMAIL')
-
-  print(CABECALHO)
-  for usuario in lista_de_usuarios:
-    usuario_formatado = TEMPLATE.format(
-      usuario['nome'],
-      usuario['idade'],
-      usuario['endereco'],
-      usuario['sexo'],
-      usuario['email'],
-      )
-    print(usuario_formatado)
+print(CABECALHO)
+for usuario1 in lista_de_usuarios:
+  usuario_formatado = TEMPLATE.format(
+    usuario1['nome'],
+    usuario1['idade'],
+    usuario1['endereco'],
+    usuario1['sexo'],
+    usuario1['email'],
+    )
+  print(usuario_formatado)
