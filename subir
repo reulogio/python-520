@@ -1,0 +1,4 @@
+>>> tem que estar do diretório : /home/developer/python-520
+git add .
+git commit -m 'aula 2.5'
+git push origin master
