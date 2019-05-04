@@ -32,7 +32,7 @@ def cadastrar_usuario(nome, email, idade):
 
 	results = cursor.fetchall()
 
-	print(len(results))
+	print(lenresults)
 
 	if len(results) == 0:
 		cursor.execute('''

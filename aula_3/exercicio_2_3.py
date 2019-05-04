@@ -27,7 +27,7 @@ class Cadastrador:
 cadastrador = Cadastrador()
 
 usuario = cadastrador.cadastrar_usuario()
-
+l
 if not usuario.maior_de_idade():
 	print('Requer mais de 18 anos')
 else:
