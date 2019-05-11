@@ -1,0 +1,7 @@
+_pycahe_
+
+# virtualenv do python
+env
+
+# dotenv
+.env
